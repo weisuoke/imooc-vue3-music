@@ -1,19 +1,32 @@
 <template>
   <div class="recommend">
-    推荐页面
+    <div class="slider-wrapper">
+      <div class="slider-content">
+        <slider v-if="sliders.length" :sliders="sliders"></slider>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { getRecommend } from '@/service/recommend'
+import Slider from '@/components/slider/slider'
 
 export default {
   name: 'recommend',
+  components: {
+    Slider
+  },
+  data () {
+    return {
+      sliders: []
+    }
+  },
   async created () {
     const result = await getRecommend()
-    console.log(result)
+    this.sliders = result.sliders
   }
 }
 </script>
 
-<style l></style>
+<style lang="scss" scoped></style>
