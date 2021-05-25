@@ -25,7 +25,7 @@
 
 <script>
 import { ref } from 'vue'
-import useSlider from '@/components/slider/useSlider'
+import useSlider from '@/components/base/slider/useSlider'
 
 export default {
   name: 'slider',

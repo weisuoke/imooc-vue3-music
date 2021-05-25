@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import useScroll from '@/components/scroll/useScroll'
+import useScroll from '@/components/base/scroll/useScroll'
 import { ref } from 'vue'
 export default {
   name: 'scroll',
